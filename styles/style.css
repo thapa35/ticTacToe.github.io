@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#tacTable {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: relative;
+    z-index: 0;
+}
+.grids {
+    border: 2px solid black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+#line {
+    position: absolute;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    width: 0px;
+    height: 0px;
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+}
+.grids:hover{
+    background-color: rgba(213, 146, 233,0.4);
+}
+#reset {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+#grid1 {
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+}
+#grid2 {
+    border-top: 0px solid transparent;
+}
+#grid3 {
+    border-top: 0px solid transparent;
+    border-right: 0px solid transparent;
+}
+#grid4 {
+    border-left: 0px solid transparent;
+}
+#grid6 {
+    border-right: 0px solid transparent;
+}
+#grid7 {
+    border-bottom: 0px solid transparent;
+    border-left: 0px solid transparent;
+}
+#grid8 {
+    border-bottom: 0px solid transparent;
+}
+#grid9 {
+    border-bottom: 0px solid transparent;
+    border-right: 0px solid transparent;
+}
+#tacTable::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
